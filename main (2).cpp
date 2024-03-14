@@ -9,18 +9,24 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <iostream>
 using namespace std;
 
-double getA(double x);
+/**
+* @Breef - функция подставляет значение const в уравнение.
+* @param x-аргумент функции
+*/
+
+double getOunce(double weight);
 
 int main()
 {
-    double x;
+    double weight;
     cout << "Вес в граммах: ";
-    cin >> x ;
-    cout << "Вес в унциях: "<< getA(x) << endl;
+    cin >> weight ;
+    cout << "Вес в унциях: "<< getOunce(weight) << endl;
     return 0;
 }
 
-double getA(double x)
+double getOunce(double weight)
 {
-    return (x/28.3);
+    const double toOunce = 28.3;
+    return (weight/toOunce);
 }
